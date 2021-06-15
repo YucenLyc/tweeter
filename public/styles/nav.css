@@ -1,0 +1,28 @@
+#nav-bar {
+  position:fixed;
+  background-color: #6b705c;
+  height: 120px;
+  width: 100%;
+  padding-right: 2em;
+  padding-left: 2em;
+  z-index: 5;
+}
+
+#nav-bar .logo {
+  float: left;
+  color: #FFFF;
+  line-height: 120px;
+  font-family: Bungee ;
+  font-size: xx-large;
+}
+
+#nav-bar .header {
+  float: right;
+  flex-direction: flex-end;
+  color: #FFFF;
+  font-family: Source Sans Pro;
+  font-size: large;
+  margin-top: 50px;
+}
+
+
