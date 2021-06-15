@@ -1,0 +1,51 @@
+.new-tweet {
+  border: none;
+  flex-flow: row wrap;
+ 
+  
+}
+
+.container {
+  margin: auto;
+}
+
+body {
+  background-color: #ffe8d6;
+}
+
+
+label {
+  
+
+}
+textarea {
+  display: block;
+  width: 100%;
+  border-bottom: 2px solid;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  background-color: transparent;
+
+}
+
+#incoming-tweet {
+  display: block;
+}
+
+#tweet-button {
+  font-family: Bungee;
+  background-color: #6b705c;
+  color: aliceblue;
+  margin-top: 10px;
+}
+
+
+.counter {
+  margin-top: 10px;
+ float:right;
+}
+
+button, input{
+  float:left;
+} 
