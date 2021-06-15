@@ -1,0 +1,19 @@
+.avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 150px;
+  background-color: #ddbea9;
+  z-index: 13;
+}
+
+.avatar-name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:#ddbea9;
+  color:#6b705c;
+  padding-top: -100px;
+  font-family: Nanum Gothic;
+}
+
