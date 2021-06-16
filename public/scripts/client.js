@@ -78,4 +78,17 @@ function createTweetElement(tweetData) {
 
   return tweetElement;
 }
-  
+
+$('#incoming-tweet').submit(function() {
+  let $button = $("#tweet-button");
+
+  event.preventDefault();
+  console.log("Button clicked");
+  console.log(this);
+    $.ajax({
+      method:"POST",
+      url:"/tweets",
+      data: $("#incoming-tweet textarea").serialized(),
+  })
+})
+
