@@ -37,10 +37,10 @@ $(document).ready(function () {
   console.log("Loading DOM content");
 
   const escape = function (str) {
-  let div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
-};
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
 
   function renderTweets(tweetData) {
     const container = $('#tweet-container');
