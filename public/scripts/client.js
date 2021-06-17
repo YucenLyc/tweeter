@@ -44,13 +44,22 @@ $(document).ready(function() {
     
     event.preventDefault();
     console.log("Button clicked");
-    console.log(this);
+    // console.log(this);
+    const textValue = $("#tweet-text").val();
+    console.log(textValue);
+    let textlength = textValue.length;
+    if(textlength > 140) {
+      alert("Please Compose a Tweet Within 140 Characters.");
+    } else if (textlength === 0) {
+      alert("Writer's block? Come Back Later Please!");
+    } else {
       $.ajax({
         method:"POST",
         url:"/tweets",
         data: $("#incoming-tweet textarea").serialize(),
     })
-  })
+    }
+  });
 
   loadtweets();
   
