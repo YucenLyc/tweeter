@@ -66,11 +66,11 @@ $(document).ready(function () {
     <p class="tweetText">${escape(tweetData.content.text)}</p>
     <footer>
       <div>10 days ago</div>
-    
-      <i class="fa-solid fa-heart"></i>
-      <i class="fa-solid fa-comment"></i>
-      <i class="fa-solid fa-star"></i>
-      <i class="fa-solid fa-link"></i>
+      <div id="icon">
+      <i class="fas fa-dog"></i>
+      <i class="far fa-meh"></i>
+      <i class="fas fa-bell"></i>
+      </div>
     </footer>
   </article>
   `;
@@ -102,11 +102,18 @@ $(document).ready(function () {
     const textValue = $("#tweet-text").val();
     console.log(textValue);
     let textlength = textValue.length;
-    if (textlength > 140) {
-      alert("Please Compose a Tweet Within 140 Characters.");
-    } else if (textlength === 0) {
-      alert("Writer's block? Come Back Later Please!");
-    } else {
+    if (textlength > 140 || textlength === 0) {
+
+      $('#notification').removeClass("hidden");
+      //$('#notification').slideToggle("slow"); 
+      $('section.new-tweet textarea').focus();
+      $('#notification').empty();
+      $('#notification').append("<b>Error</b> Invalid Tweet.");
+      setTimeout(() => {
+        //$('#notification').addClass("hidden");
+        $('#notification').slideToggle();
+      }, 2000);
+    }  else {
       $.ajax({
         method: "POST",
         url: "/tweets",
@@ -122,63 +129,42 @@ $(document).ready(function () {
           $(".counter").val(140);
         });
     }
+    
+    })
   })
 
-});
 
 
 
 
+// $('#incoming-tweet').submit(function () {
+//   let $button = $("#tweet-button");
 
+//   event.preventDefault();
+//   console.log("Button clicked");
+//   // console.log(this);
+//   const textValue = $("#tweet-text").val();
+//   console.log(textValue);
+//   let textlength = textValue.length;
+//   if (textlength > 140) {
+//     alert("Please Compose a Tweet Within 140 Characters.");
+//   } else if (textlength === 0) {
+//     alert("Writer's block? Come Back Later Please!");
+//   } else {
+//     $.ajax({
+//       method: "POST",
+//       url: "/tweets",
+//       data: $("#incoming-tweet textarea").serialize(),
+//     })
+//       .then(function (successfulPost) {
+//         return $.ajax('/tweets', { method: "GET" })
+//       })
+//       .then(function (allTweets) {
+//         $('#incoming-tweet')[0].reset();
+//         const latestTweet = [allTweets[allTweets.length - 1]];
+//         renderTweets(latestTweet);
+//         $(".counter").val(140);
+//       });
+//   }
+// })
 
-// function renderTweets(tweetData) {
-//   const container = $('#tweet-container');
-
-//   tweetData.forEach( (tweet) => {
-//     const tweetElement = createTweetElement(tweet);
-//     container.prepend(tweetElement);
-//   })
-// }
-
-// function createTweetElement(tweetData) { 
-//   const user = tweetData.user;
-
-
-//   const tweetElement = `
-//   <article class="tweet">
-//   <header>
-//     <div class="userData">
-//        <img class="avatar-guest" src=${user.avatars}>
-//        <div class="tweeterName">${user.name}</div>
-//     </div>
-//      <div class="tweeterHandle">${user.handle}</div>
-//   </header>
-//   <p class="tweetText">${tweetData.content.text}</p>
-//   <footer>
-//     <div>10 days ago</div>
-
-//       <i class="fa-solid fa-heart"></i>
-//       <i class="fa-solid fa-comment"></i>
-//       <i class="fa-solid fa-star"></i>
-//       <i class="fa-solid fa-link"></i>
-
-//   </footer>
-// </article>
-// `;
-
-//   return tweetElement;
-// }
-
-
-// fetching tweets from the localhost page:
-// function loadtweets () {
-//   $.ajax({
-//     type:"GET",
-//     url:"/tweets",
-//     dataType: "JSON"
-//   }).done (data => {
-//     renderTweets(data)
-//   })
-
-// }
-// loadtweets();
