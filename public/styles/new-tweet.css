@@ -1,8 +1,12 @@
 .new-tweet {
   border: none;
   flex-flow: row wrap;
- 
   
+}
+
+.hidden {
+  display: none; 
+
 }
 
 .container {
@@ -14,14 +18,11 @@ body {
 }
 
 
-label {
-  
 
-}
 textarea {
   display: block;
   width: 100%;
-  border-bottom: 2px solid;
+  border-bottom: 5px solid grey;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -35,15 +36,21 @@ textarea {
 
 #tweet-button {
   font-family: Bungee;
-  background-color: #6b705c;
+  background-color: #3d405b;
   color: aliceblue;
   margin-top: 10px;
 }
 
+#notification {
+  border: 2px solid red
+}
 
+#icon {
+  float: right;
+}
 .counter {
   margin-top: 10px;
- float:right;
+  float:right;
 }
 
 button, input{
