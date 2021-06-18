@@ -1,19 +1,28 @@
-.avatar {
+ body > header {
+  width: 100%;
+  background-color: #c2c5aa;
+  /* need a backgorund img if have time  */
+
+ 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding-top: 150px;
-  background-color: #ddbea9;
-  z-index: 13;
+  justify-content: center;
 }
 
-.avatar-name {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color:#ddbea9;
-  color:#6b705c;
-  padding-top: -100px;
-  font-family: Nanum Gothic;
+body > header img {
+  margin: 10px;
 }
 
+body > header h2 {
+  margin: 8px;
+}
+
+@media (min-width: 850px) {
+  body > header {
+    width: 30vw;
+    float: left;
+    margin: 170px 0px 0px 50px;
+    position: fixed;
+  }
+}

@@ -10,7 +10,7 @@ $(document).ready(function() {
     if (tweetlength > 140 ) {
       $(".counter").css("color", "red");
     } else {
-      $(".counter").css("color", "gray");
+      $(".counter").css("color", "grey");
     }
     console.log(this);
   });

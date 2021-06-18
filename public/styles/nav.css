@@ -1,6 +1,6 @@
 #nav-bar {
-  position:fixed;
-  background-color: #6b705c;
+  /* position:fixed; */
+  background-color: #283618;
   height: 120px;
   width: 100%;
   padding-right: 2em;
@@ -23,6 +23,14 @@
   font-family: Source Sans Pro;
   font-size: large;
   margin-top: 50px;
+  
 }
 
 
+#arrow-icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  color: white;
+  align-items: flex-end;
+}

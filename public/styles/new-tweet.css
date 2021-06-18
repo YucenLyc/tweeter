@@ -1,7 +1,9 @@
 .new-tweet {
   border: none;
-  flex-flow: row wrap;
-  
+  width: 100%;
+  margin-top: 50px;
+  /* flex-flow: row wrap; */
+  /* display: none; */
 }
 
 .hidden {
@@ -14,19 +16,21 @@
 }
 
 body {
-  background-color: #ffe8d6;
+  background-color: #ede0d4;
 }
 
-
-
 textarea {
-  display: block;
+  /* display: block; */
   width: 100%;
+  resize: none;
+  outline: none;
   border-bottom: 5px solid grey;
-  border-top: none;
+  border-style: none;
+  outline:none;
+  /* border-top: none;
   border-left: none;
-  border-right: none;
-  background-color: transparent;
+  border-right: none; */
+  background-color: white;
 
 }
 
@@ -36,7 +40,7 @@ textarea {
 
 #tweet-button {
   font-family: Bungee;
-  background-color: #3d405b;
+  background-color: #283618;
   color: aliceblue;
   margin-top: 10px;
 }
@@ -46,7 +50,7 @@ textarea {
 }
 
 #icon {
-  float: right;
+  float: ;
 }
 .counter {
   margin-top: 10px;

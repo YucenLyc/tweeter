@@ -105,12 +105,10 @@ $(document).ready(function () {
     if (textlength > 140 || textlength === 0) {
 
       $('#notification').removeClass("hidden");
-      //$('#notification').slideToggle("slow"); 
       $('section.new-tweet textarea').focus();
       $('#notification').empty();
       $('#notification').append("<b>Error</b> Invalid Tweet.");
       setTimeout(() => {
-        //$('#notification').addClass("hidden");
         $('#notification').slideToggle();
       }, 2000);
     }  else {
@@ -131,40 +129,5 @@ $(document).ready(function () {
     }
     
     })
-  })
-
-
-
-
-
-// $('#incoming-tweet').submit(function () {
-//   let $button = $("#tweet-button");
-
-//   event.preventDefault();
-//   console.log("Button clicked");
-//   // console.log(this);
-//   const textValue = $("#tweet-text").val();
-//   console.log(textValue);
-//   let textlength = textValue.length;
-//   if (textlength > 140) {
-//     alert("Please Compose a Tweet Within 140 Characters.");
-//   } else if (textlength === 0) {
-//     alert("Writer's block? Come Back Later Please!");
-//   } else {
-//     $.ajax({
-//       method: "POST",
-//       url: "/tweets",
-//       data: $("#incoming-tweet textarea").serialize(),
-//     })
-//       .then(function (successfulPost) {
-//         return $.ajax('/tweets', { method: "GET" })
-//       })
-//       .then(function (allTweets) {
-//         $('#incoming-tweet')[0].reset();
-//         const latestTweet = [allTweets[allTweets.length - 1]];
-//         renderTweets(latestTweet);
-//         $(".counter").val(140);
-//       });
-//   }
-// })
+  });
 
