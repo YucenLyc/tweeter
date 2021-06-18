@@ -2,8 +2,6 @@
   border: none;
   width: 100%;
   margin-top: 50px;
-  /* flex-flow: row wrap; */
-  /* display: none; */
 }
 
 .hidden {
@@ -20,16 +18,12 @@ body {
 }
 
 textarea {
-  /* display: block; */
   width: 100%;
   resize: none;
   outline: none;
   border-bottom: 5px solid grey;
   border-style: none;
   outline:none;
-  /* border-top: none;
-  border-left: none;
-  border-right: none; */
   background-color: white;
 
 }
@@ -49,9 +43,6 @@ textarea {
   border: 2px solid red
 }
 
-#icon {
-  float: ;
-}
 .counter {
   margin-top: 10px;
   float:right;
