@@ -6,7 +6,8 @@
 
 .hidden {
   display: none; 
-
+  color:red;
+  font-family: bungee;
 }
 
 .container {
@@ -40,12 +41,13 @@ textarea {
 }
 
 #notification {
-  border: 2px solid red
+  border-color: red
 }
 
 .counter {
   margin-top: 10px;
   float:right;
+  font-family: bungee;
 }
 
 button, input{
